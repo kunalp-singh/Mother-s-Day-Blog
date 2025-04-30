@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { use } from "react";  // Import 'use' from React
 
 export default function CategoryPage({ params }) {
   const [articles, setArticles] = useState([]);
@@ -10,9 +9,8 @@ export default function CategoryPage({ params }) {
   const [category, setCategory] = useState("");
   const [isClient, setIsClient] = useState(false); // To handle hydration issue
 
-  // Unwrap 'params' using React.use() as params is now a Promise
-  const resolvedParams = use(params);
-  const categoryFromParams = resolvedParams.category;
+  // No need to use React.use() with params as it's not a Promise in this context
+  const categoryFromParams = params.category;
 
   useEffect(() => {
     setIsClient(true); // Set to true once component is mounted on client
@@ -55,7 +53,7 @@ export default function CategoryPage({ params }) {
 
   return (
     <div className="container">
-      <h1>Articles about &ldquo;{category}&rdquo;</h1>
+      <h1>Articles about &ldquo;{decodeURIComponent(category)}&rdquo;</h1>
       <ul>
         {filteredArticles.map((article) => (
           <li key={article.id}>
