@@ -2,17 +2,36 @@
 
 "use client";  // Mark this as a client-side component
 
-import { use } from 'react';
+import { useEffect, useState } from 'react';
 import articlesData from "@/data/articles.json";
 import Image from "next/image";
 import styles from "./article.module.css";
 
+// This needs to be exported at the module level - outside the client component
+export async function generateStaticParams() {
+  // Return an array of objects with the slug parameter
+  return articlesData.articles.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
 export default function ArticlePage({ params }) {
-  const resolvedParams = use(params);
-  const slug = resolvedParams.slug;
+  const [article, setArticle] = useState(null);
+  const [loading, setLoading] = useState(true);
   
-  // Find the article that matches the slug
-  const article = articlesData.articles.find((article) => article.slug === slug);
+  useEffect(() => {
+    // Find the article that matches the slug
+    const foundArticle = articlesData.articles.find(
+      (article) => article.slug === params.slug
+    );
+    
+    setArticle(foundArticle);
+    setLoading(false);
+  }, [params.slug]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   if (!article) {
     return (
