@@ -1,0 +1,42 @@
+.container{
+    flex:5;
+    padding: 20px;
+    border: 1px solid var(--softBg);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .container:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    border-color: var(--softTextColor);
+  }
+  
+  .title{
+    margin: 50px 0px;
+    color: var(--textColor);
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--softTextColor);
+    transition: width 0.3s ease;
+  }
+  
+  .container:hover .title::after {
+    width: 100px;
+  }
+
+  .noResults {
+    text-align: center;
+    color: var(--softTextColor);
+    font-style: italic;
+    margin: 40px 0;
+  }

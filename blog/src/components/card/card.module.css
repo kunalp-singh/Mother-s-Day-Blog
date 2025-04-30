@@ -1,0 +1,69 @@
+.container {
+    margin-bottom: 50px;
+    display: flex;
+    gap: 50px;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .image {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Optional: Add hover effect */
+  .imageContainer:hover .image {
+    transform: scale(1.05);
+  }
+  
+  /* Make images responsive */
+  @media screen and (max-width: 768px) {
+    .imageContainer {
+      height: 200px;
+    }
+  }
+  
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .detail {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .date {
+    color: gray;
+  }
+  
+  .category {
+    color: crimson;
+    font-weight: 500;
+  }
+  
+  .desc {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--softTextColor);
+  }
+  
+  .link {
+    border-bottom: 1px solid crimson;
+    width: max-content;
+    padding: 2px 0px;
+  }
+  
+  @media screen and (max-width: 1280px) {
+    .imageContainer {
+      display: none;
+    }
+  }

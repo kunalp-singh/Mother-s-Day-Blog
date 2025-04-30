@@ -1,0 +1,147 @@
+export const articles = [
+      {
+        "id": "1",
+        "slug": "the-power-of-showing-up",
+        "title": "The Power of Showing Up",
+        "excerpt": "Reena Thomas shares how her mother's unwavering presence at every event taught her the silent strength of commitment.",
+        "fullContent": "From school plays to dentist visits, Mom was always there. Not always loud, not always in the front row—but always present. Her consistency became my foundation. I never needed applause to feel seen because I knew she was there. That's the power of showing up.",
+        "author": "Reena Thomas",
+        "submissionDate": "2024-05-12",
+        "category": "Life Lessons",
+        "readingTime": "5",
+        "imageUrl": "/p1.jpg"
+      },
+      {
+        "id": "2",
+        "slug": "the-last-recipe",
+        "title": "The Last Recipe",
+        "excerpt": "Rohan Mehta reflects on the bittersweet memory of recreating his late mother's mango pickle, and the comfort he finds in her handwritten recipe card.",
+        "fullContent": "The jar didn't taste quite the same. But the scent—sharp, tangy, familiar—brought tears to my eyes. Her handwriting, curling and dotted with oil stains, guided my hands. In the kitchen, with spices dancing in the air, I found her again.",
+        "author": "Rohan Mehta",
+        "submissionDate": "2024-05-12",
+        "category": "Loss & Remembrance",
+        "readingTime": "6",
+        "imageUrl": "/p2.jpg"
+      },
+      {
+        "id": "3",
+        "slug": "sticky-notes-and-spilled-tea",
+        "title": "Sticky Notes and Spilled Tea",
+        "excerpt": "Megha Kapoor recounts an ordinary afternoon that became a core memory—marked by laughter, tea stains, and a mother's quiet wisdom.",
+        "fullContent": "It was just tea. But that day, the cup tipped over a pile of my college rejections, and I cried. She didn't speak much. She handed me a sticky note: 'This isn't the end.' I found it months later, still stained. It still makes me smile.",
+        "author": "Megha Kapoor",
+        "submissionDate": "2024-05-12",
+        "category": "Everyday Moments",
+        "readingTime": "5",
+        "imageUrl": "/p3.jpg"
+      },
+      {
+        "id": "4",
+        "slug": "the-first-goodbye",
+        "title": "The First Goodbye",
+        "excerpt": "Zara Shaikh writes about the tender, tearful morning she left home for college—and how her mother's packed lunch said all the words they couldn't.",
+        "fullContent": "She didn't cry. But I did. On the train, I opened the tiffin box. Paneer paratha. My favorite. Tucked beneath it was a note: 'You're ready. I'm proud.' That was her way. Quiet, loving, brave.",
+        "author": "Zara Shaikh",
+        "submissionDate": "2024-05-12",
+        "category": "The First Time",
+        "readingTime": "4",
+        "imageUrl": "/p4.jpg"
+      },
+      {
+        "id": "5",
+        "slug": "quiet-wisdom",
+        "title": "Quiet Wisdom",
+        "excerpt": "How a mother's unspoken lessons shaped her daughter's courage to lead.",
+        "fullContent": "My mother never lectured. She lived her lessons. I watched her stand up for fairness, kneel for prayer, and bend down to help others rise. She showed me leadership doesn't need a mic—it needs integrity.",
+        "author": "Lina Rajan",
+        "submissionDate": "2024-05-12",
+        "category": "Life Lessons",
+        "readingTime": "5",
+        "imageUrl": "/p5.jpg"
+      },
+      {
+        "id": "6",
+        "slug": "mornings-with-mom",
+        "title": "Mornings with Mom",
+        "excerpt": "Nostalgic memories of childhood breakfasts and quiet talks before school.",
+        "fullContent": "Every morning, she'd sit with me as I ate, her hand gently smoothing my hair. We didn't talk much, but I still remember her hums, her warmth, the smell of cardamom in the air. That's how love sounded at 7 AM.",
+        "author": "Anika D'Souza",
+        "submissionDate": "2024-05-12",
+        "category": "Everyday Moments",
+        "readingTime": "4",
+        "imageUrl": "/p6.jpg"
+      },
+      {
+        "id": "7",
+        "slug": "the-tender-stitch",
+        "title": "The Tender Stitch",
+        "excerpt": "A story about how a simple torn uniform led to a lesson in care and resilience.",
+        "fullContent": "I ripped my uniform during recess and feared the scolding. But Mom didn't yell. That night, she stitched it up while humming. 'Things tear, we mend,' she said. That phrase has patched more than just fabric in my life.",
+        "author": "Ishaan Verma",
+        "submissionDate": "2024-05-12",
+        "category": "Life Lessons",
+        "readingTime": "4",
+        "imageUrl": "/p7(1).jpg"
+      },
+      {
+        "id": "8",
+        "slug": "the-empty-chair",
+        "title": "The Empty Chair",
+        "excerpt": "A son reflects on his first festival without his mother.",
+        "fullContent": "The chair next to mine stayed empty all through Diwali. I tried to fill the silence with laughter and lights, but the glow never reached my heart. She wasn't there, but somehow, she still was—in the sweets, in the stories, in every diya.",
+        "author": "Karan Bhatt",
+        "submissionDate": "2024-05-12",
+        "category": "Loss & Remembrance",
+        "readingTime": "6",
+        "imageUrl": "/p7.jpg"
+      },
+      {
+        "id": "9",
+        "slug": "papercuts-and-kisses",
+        "title": "Papercuts and Kisses",
+        "excerpt": "A small accident leads to a bigger memory.",
+        "fullContent": "I got a papercut while crafting a card for Mom. She kissed it better, said, 'Love hurts sometimes, but it's worth making.' I didn't understand then, but I do now—every scar tells a story of care.",
+        "author": "Neha Iyer",
+        "submissionDate": "2024-05-12",
+        "category": "Everyday Moments",
+        "readingTime": "3",
+        "imageUrl": "/p8.jpg"
+      },
+      {
+        "id": "10",
+        "slug": "the-first-fever",
+        "title": "The First Fever",
+        "excerpt": "A mother's touch during a sleepless night becomes unforgettable.",
+        "fullContent": "My head was burning and my little body trembling. I remember her hand on my forehead—cool, steady, magical. She didn't sleep a wink. It was the first time I realized how much love hides in worry.",
+        "author": "Aanya Singh",
+        "submissionDate": "2024-05-12",
+        "category": "The First Time",
+        "readingTime": "4",
+        "imageUrl": "/p9.jpg"
+      },
+      {
+        "id": "11",
+        "slug": "grief-in-her-garden",
+        "title": "Grief in Her Garden",
+        "excerpt": "A daughter tends her mother's garden after she's gone—and finds healing between petals.",
+        "fullContent": "Her roses hadn't bloomed since the funeral. I almost gave up watering them. But one morning, they were back—full, bright, stubborn. Like her. That garden now carries the parts of her I couldn't bury.",
+        "author": "Tanya Fernandes",
+        "submissionDate": "2024-05-12",
+        "category": "Loss & Remembrance",
+        "readingTime": "5",
+        "imageUrl": "/p10.jpg"
+      },
+      {
+        "id": "12",
+        "slug": "the-first-phone-call",
+        "title": "The First Phone Call",
+        "excerpt": "A mother's voice through a crackling line offered more comfort than any textbook ever could.",
+        "fullContent": "Hostel was cold. My room, colder. I dialed her. Just hearing her say 'Hello, beta?' melted every anxiety. She didn't fix my problems. She just listened. And somehow, that was enough.",
+        "author": "Ritika Ghosh",
+        "submissionDate": "2024-05-12",
+        "category": "The First Time",
+        "readingTime": "4",
+        "imageUrl": "/p11.jpg"
+      }
+    ]
+  

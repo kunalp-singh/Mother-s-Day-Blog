@@ -1,0 +1,119 @@
+.container {
+    flex: 2;
+    margin-top: 60px;
+  }
+  
+  .subtitle {
+    color: gray;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .title {
+    font-size: 28px;
+  }
+  
+  .categoryList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 35px;
+    margin-bottom: 60px;
+  }
+  
+  .categoryItem {
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Specific styles for each category */
+  .categoryItem:nth-child(1) {
+    background-color: #3b4d61;
+    color: white;
+  }
+  
+  .categoryItem:nth-child(1):hover {
+    background-color: #2c3a4a;
+  }
+  
+  .categoryItem:nth-child(2) {
+    background-color: #654c4f;
+    color: white;
+  }
+  
+  .categoryItem:nth-child(2):hover {
+    background-color: #4e3a3c;
+  }
+  
+  .categoryItem:nth-child(3) {
+    background-color: #4a5d4e;
+    color: white;
+  }
+  
+  .categoryItem:nth-child(3):hover {
+    background-color: #384539;
+  }
+  
+  .categoryItem:nth-child(4) {
+    background-color: #2d4654;
+    color: white;
+  }
+  
+  .categoryItem:nth-child(4):hover {
+    background-color: #1e2f38;
+  }
+  
+  /* Add subtle hover effect */
+  .categoryItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Add subtle transition animation */
+  .categoryItem {
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Add a subtle shine effect on hover */
+  .categoryItem::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .categoryItem:hover::after {
+    opacity: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 1024px) {
+    .categoryList {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 640px) {
+    .categoryList {
+      grid-template-columns: 1fr;
+    }
+  }

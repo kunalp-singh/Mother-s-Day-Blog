@@ -1,0 +1,135 @@
+/* Title card positioned outside of image */
+.titleCard {
+  width: 40%;
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: auto;
+  z-index: 10;
+}
+
+/* Category label styling - bright green like in the image */
+.category {
+  color: #0CAD00;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+/* Article title styling - clean and bold */
+.title {
+  font-size: 36px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Article subtitle/description - italic with book title styling */
+.subtitle {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* Author info and date styling */
+.author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.byline {
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.date {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Featured article container with proper positioning */
+.featuredArticle {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  margin: 40px 0;
+  display: flex;
+}
+
+/* Image wrapper - ensures image takes up correct space */
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Featured image - full-width with appropriate styling */
+.featuredImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .titleCard {
+    width: 45%;
+    padding: 30px;
+  }
+  
+  .title {
+    font-size: 30px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featuredArticle {
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .imageWrapper {
+    height: 350px;
+  }
+  
+  .titleCard {
+    position: relative;
+    width: 100%;
+    right: auto;
+    top: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    height: 250px;
+  }
+  
+  .titleCard {
+    padding: 25px 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+}

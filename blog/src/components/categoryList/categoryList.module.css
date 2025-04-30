@@ -1,0 +1,103 @@
+.container {
+  padding: 2rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--textColor);
+}
+
+.categories {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 2px solid transparent;
+  flex-shrink: 0;
+  min-width: 140px;
+}
+
+/* Add different colors for each category based on data-slug attribute */
+.category[href*="life-lessons"] {
+  background-color: #ff9999;
+  border-color: #ff6666;
+  color: #800000;
+}
+
+.category[href*="loss-and-rememberence"] {
+  background-color: #bbaaff;
+  border-color: #9988ff;
+  color: #3a2099;
+}
+
+.category[href*="everyday-moments"] {
+  background-color: #9ff2c2;
+  border-color: #7ae0a9;
+  color: #1c6d42;
+}
+
+.category[href*="the-first-time"] {
+  background-color: #ffd16a;
+  border-color: #ffbb33;
+  color: #805500;
+}
+
+.category:hover {
+  transform: translateY(-2px);
+  background-color: #ffffff;
+  border-color: #333;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  color: #222;
+}
+
+.image {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* Override for dark mode */
+:global(.dark-mode) .category[href*="life-lessons"],
+:global([data-theme="dark"]) .category[href*="life-lessons"] {
+  background-color: #ff9999 !important;
+  border-color: #ff6666 !important;
+  color: #800000 !important;
+}
+
+:global(.dark-mode) .category[href*="loss-and-rememberence"],
+:global([data-theme="dark"]) .category[href*="loss-and-rememberence"] {
+  background-color: #bbaaff !important;
+  border-color: #9988ff !important;
+  color: #3a2099 !important;
+}
+
+:global(.dark-mode) .category[href*="everyday-moments"],
+:global([data-theme="dark"]) .category[href*="everyday-moments"] {
+  background-color: #9ff2c2 !important;
+  border-color: #7ae0a9 !important;
+  color: #1c6d42 !important;
+}
+
+:global(.dark-mode) .category[href*="the-first-time"],
+:global([data-theme="dark"]) .category[href*="the-first-time"] {
+  background-color: #ffd16a !important;
+  border-color: #ffbb33 !important;
+  color: #805500 !important;
+}

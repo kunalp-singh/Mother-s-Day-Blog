@@ -1,0 +1,37 @@
+/* blog/src/app/blog/blog.module.css */
+.container {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1536px) {
+  .container {
+    max-width: 1366px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
