@@ -54,8 +54,8 @@ export default function CategoryPage({ params }) {
   }
 
   return (
-    <div>
-      <h1>Articles in "{decodeURIComponent(category)}"</h1>
+    <div className='container'>
+      <h1>Articles about {category}</h1>
       <ul>
         {filteredArticles.map((article) => (
           <li key={article.id}>
