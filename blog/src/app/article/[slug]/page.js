@@ -2,13 +2,12 @@
 import articlesData from "@/data/articles.json";
 import ClientArticlePage from "./ClientArticlePage";
 
-// This function MUST be in a Server Component file
+// Fix the generateStaticParams function format
 export async function generateStaticParams() {
-  return {
-    params: articlesData.articles.map((article) => ({
-      slug: article.slug,
-    })),
-  };
+  // Return array of objects directly, not wrapped in params
+  return articlesData.articles.map((article) => ({
+    slug: article.slug,
+  }));
 }
 
 export default function ArticlePage({ params }) {
