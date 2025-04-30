@@ -1,13 +1,11 @@
 // /app/article/[slug]/page.js
 
-"use client";  // Mark this as a client-side component
-
 import { useEffect, useState } from 'react';
 import articlesData from "@/data/articles.json";
 import Image from "next/image";
 import styles from "./article.module.css";
 
-// This needs to be exported at the module level - outside the client component
+// This needs to be a Server Component to use generateStaticParams
 export async function generateStaticParams() {
   // Return an array of objects with the slug parameter
   return articlesData.articles.map((article) => ({
@@ -16,22 +14,10 @@ export async function generateStaticParams() {
 }
 
 export default function ArticlePage({ params }) {
-  const [article, setArticle] = useState(null);
-  const [loading, setLoading] = useState(true);
-  
-  useEffect(() => {
-    // Find the article that matches the slug
-    const foundArticle = articlesData.articles.find(
-      (article) => article.slug === params.slug
-    );
-    
-    setArticle(foundArticle);
-    setLoading(false);
-  }, [params.slug]);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // Since this is now a Server Component, we don't need useState or useEffect
+  const article = articlesData.articles.find(
+    (article) => article.slug === params.slug
+  );
 
   if (!article) {
     return (
