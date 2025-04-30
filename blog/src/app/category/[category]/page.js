@@ -1,5 +1,6 @@
 "use client";  // Ensure this file is a client component
 
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -9,7 +10,7 @@ export default function CategoryPage({ params }) {
   const [category, setCategory] = useState("");
   const [isClient, setIsClient] = useState(false); // To handle hydration issue
 
-  // No need to use React.use() with params as it's not a Promise in this context
+  // Get category directly from params
   const categoryFromParams = params.category;
 
   useEffect(() => {
@@ -46,14 +47,14 @@ export default function CategoryPage({ params }) {
   if (!filteredArticles.length) {
     return (
       <div>
-        <h1>No articles found for &ldquo;{decodeURIComponent(category)}&rdquo;</h1>
+        <h1>No articles found for "{decodeURIComponent(category)}"</h1>
       </div>
     );
   }
 
   return (
     <div className="container">
-      <h1>Articles about &ldquo;{decodeURIComponent(category)}&rdquo;</h1>
+      <h1>Articles about "{decodeURIComponent(category)}"</h1>
       <ul>
         {filteredArticles.map((article) => (
           <li key={article.id}>
