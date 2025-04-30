@@ -44,18 +44,18 @@ export default function CategoryPage({ params }) {
     return <div>Loading...</div>;
   }
 
-  // Display message when no articles match the category
+  // Display message when no articles found
   if (!filteredArticles.length) {
     return (
       <div>
-        <h1>No articles found for "{decodeURIComponent(category)}"</h1>
+        <h1>No articles found for &ldquo;{decodeURIComponent(category)}&rdquo;</h1>
       </div>
     );
   }
 
   return (
-    <div className='container'>
-      <h1>Articles about {category}</h1>
+    <div className="container">
+      <h1>Articles about &ldquo;{category}&rdquo;</h1>
       <ul>
         {filteredArticles.map((article) => (
           <li key={article.id}>
