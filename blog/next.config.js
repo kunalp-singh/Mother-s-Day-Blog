@@ -1,10 +1,10 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost'],
-    unoptimized: true
+    unoptimized: true, // This helps with static exports if you're using Image component
   },
-  output: 'export'
-}
+  // Remove the "output: export" line
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
