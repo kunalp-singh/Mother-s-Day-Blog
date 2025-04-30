@@ -4,9 +4,11 @@ import ClientArticlePage from "./ClientArticlePage";
 
 // This function MUST be in a Server Component file
 export async function generateStaticParams() {
-  return articlesData.articles.map((article) => ({
-    slug: article.slug,
-  }));
+  return {
+    params: articlesData.articles.map((article) => ({
+      slug: article.slug,
+    })),
+  };
 }
 
 export default function ArticlePage({ params }) {
