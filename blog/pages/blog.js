@@ -6,8 +6,8 @@ import articlesData from "@/data/articles.json";
 import Card from "@/components/card/Card";
 import styles from "@/app/blog.module.css";
 
-export default function Blog({ searchParams }) {
-  const { cat } = searchParams; // Get category from URL params
+export default function Blog({ searchParams = {} }) {
+  const { cat = null } = searchParams; // Get category from URL params with default null
   const allArticles = articlesData.articles; // Access the articles array
 
   // Filter articles if category is provided
